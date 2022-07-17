@@ -1,0 +1,28 @@
+
+
+/* 轮播图整体宽高 */
+.swiper_WH,
+ul.swiper_ul  li,
+ul.swiper_ul > li img {
+    width: 600px;
+    height: 350px;
+}
+
+
+
+.re {
+    position: relative;
+}
+
+ul.swiper_ul {
+    list-style-type: none;
+}
+
+ul.swiper_ul > li{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: 1s;
+    opacity: 0;
+}
