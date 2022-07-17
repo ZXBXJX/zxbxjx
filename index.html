@@ -89,6 +89,17 @@ fffffffffjtjjjjttttttttiiiiiii;;;;;;;;;i;;;;,;;ii;;ii;;;,;;,;,,::,,;iiiititttttt
 .footer a {color: black;}
 .footer a:hover {color: bisque;}
 p {margin: 4px;}
+/*gmail*/
+.b {margin: 20px auto;padding: 12px;font-size: 15px;border-radius: 22px;color: black;}
+.b {border: 2px solid #3498db;width: 220px;}
+.b {width: 150px;border: 2px solid #2ecc71;}
+.b:focus {border-color: #2ecc71;width: 280px;transition: 0.5s;}
+.b:hover {background-color: #2ecc71;transition: 0.5s;}
+.bb {margin: 50px auto;padding: 12px;font-size: 15px;border-radius: 22px;color: #f8f9fa;}
+.bb {border: 2px solid #3498db;width: 500px;}
+.bb {width: 500px;height: 200px;border: 2px solid #2ecc71;}
+.bb:focus {border-color: #2ecc71;width: 500px;transition: 0.5s;}
+.bb:hover {background-color: #2ecc71;transition: 0.5s;}
 </style>
 </head>
 <body>
@@ -248,6 +259,7 @@ p {margin: 4px;}
             </div>
         </li>
     </ul>
+
 </div>
 <script>
     let tabNavItem = document.querySelectorAll(".tab_nav>li");
@@ -266,8 +278,6 @@ p {margin: 4px;}
         }
     })
 </script>
-
-
     </div>
     <br>
     <br>
@@ -315,7 +325,42 @@ p {margin: 4px;}
     </div>
   </div>
 </div>
+<center>
+<form enctype="text/plain" accept-charset="utf-8">
+    <input id="nameText" type="text" name="Name" class="b" placeholder="name" required><input id="emailText" type="email" name="Email" class="b" placeholder="Email" required><input id="telText" type="tel" name="Phone" class="b" aria-invalid="false"
+        placeholder="電話(phone)" required><input id="subText" type="text" name="Subject" class="b" aria-invalid="false" placeholder="主旨(subject)" required><br><textarea id="bodyText" name="your-message" class="bb" aria-required="true" aria-invalid="false"
+        placeholder="你的訊息(Your Message)" required></textarea>
+    <div>
+        <input type="button" class="b" value="送出訊息" onclick="submitHandler();">
+        <a id="mailTo"></a>
+    </div>
+</form>
+</center>
 </div>
+<script>
+    var initSubject = '',
+        initBody = '';
+
+    function submitHandler() {
+        var to = "hoikahei2007@gmail.com";
+        var name = nameText.value;
+        var email = emailText.value;
+        var tel = telText.value;
+        var subject = subText.value;
+        var body = "" + bodyText.value + '%0A%0A%0A';
+        body += "From:" + nameText.value + '%0A';
+        body += "Email:" + emailText.value + '%0A';
+        body += "Tel:" + telText.value;
+        mailTo.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+        mailTo.click();
+    }
+
+    function init() {
+        subText.value = initSubject;
+        toText.value = initTo;
+        bodyText.value = initBody;
+    }
+</script>
   <div class="column side">
     <div class="my_kefu"><ul><p class="rre"><img  src="https://zxbxjx.github.io/zxbxjx/照片/微博.jpg" width="90">微博</p> <li><div> 微信</div><div class="my_kefu_img"><img id="weixin" src="https://zxbxjx.github.io/zxbxjx/照片/WeChat.jpg"></div></li><li><div>QQ</div><div class="my_kefu_img"><img id="weixin" src="https://zxbxjx.github.io/zxbxjx/照片/qq.jpg"></div></li><li><div id="Itm">Instagram</div><div class="my_kefu_img"><img id="weixin" src="https://zxbxjx.github.io/zxbxjx/照片/Instagram.jpg"></div></li><li><div id="bi">bilibili</div><div class="my_kefu_img"><img id="weixin" src="https://zxbxjx.github.io/zxbxjx/照片/bilibili.jpeg"></div></li></ul></div></div>
 </div>
@@ -349,8 +394,5 @@ p {margin: 4px;}
 </script>
 <script src="index.js"></script>
 <script>var imgSrcs = [ "https://zxbxjx.github.io/zxbxjx/照片/moroccan-flower.png","https://zxbxjx.github.io/zxbxjx/照片/watercolor.webp","https://zxbxjx.github.io/zxbxjx/照片/star02.png"];setInterval(function() {$("html").css("background", "url(" + imgSrcs[imgSrcs.push(imgSrcs.shift())-1] + ")",);}, 10000);</script>
-<!--點擊-->
-<!--<script src="q.js"></script>
-<link rel="stylesheet" href="q.css"/>-->
 </body>
 </html>
