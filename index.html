@@ -104,18 +104,27 @@ p {margin: 4px;}
 </style>
 </head>
 <body>
-<div class="header" style="z-index: 100; position: relative;">
-  <nav>
-    <ul class="first_ul">
-        <li class="first_li"><a href="https://zxbxjx.github.io/zxbxjx/index.html" id="fia"></a></li>
-        <li class="first_li"><a href="#" id="fib"></a></li>
-        <li class="first_li"><a href="#" id="fic"></a><ul class="second_ul"><li class="second_li"><a href="https://eservice.ssm.gov.mo/rnatestbook/" id="fica"></a></li><li class="second_li"><a href="https://eservice.ssm.gov.mo/allpeoplernatestbook/Booking?lang=ch" id="ficb"></a></li><li class="second_li"><a href="https://eservice.ssm.gov.mo/generalrat/" id="ficc"></a></li></ul></li>
-        <li class="first_li"><a href="#" id="fid"></a></li>
-        <li class="first_li"><a href="#" id="fie"></a></li>
-    </ul>
-</nav>
-</div>
-<header><div class="container"><h1 class="fd"><span><i id="ha"></i></span><span><i id="hb"></i></span><span><i id="hc"></i></span></h1><p class="assss" id="he"></p></div></header>
+    <header>
+        <a href="https://zxbxjx.github.io/zxbxjx/index.html" class="logo">ZXBXJX</a>
+        <ul class="cc">
+				<li class="zz"><a href="https://zxbxjx.github.io/zxbxjx/index.html">首页</a></li>
+				<li class="zz"><a href="https://zxbxjx.github.io/zxbxjx/追番/indec.html">番剧</a></li>
+			  <div class="dropdown">
+				<li class="zz"><a href="#">抗疫</a></li>
+				<div class="dropdown-content">
+					<a href="https://eservice.ssm.gov.mo/rnatestbook/">核酸</a>
+					<a href="https://eservice.ssm.gov.mo/allpeoplernatestbook/Booking?lang=ch">全民核酸</a>
+					<a href="https://eservice.ssm.gov.mo/generalrat/">抗原檢測</a>
+				</div>
+			  </div>
+				<li class="zz"><a href="#">綜藝</a></li>
+				<li class="zz"><a href="#">漫画</a></li>
+        </ul>
+    </header>
+    <section class="banner1">
+		<div class="container"><div><h1 class="fd"><span><i>HI</i></span><span><i>,</i></span><span><i> VISITOR!</i></span></h1></div>
+	</section>
+
 <div class="row">
     <!--左-->
   <div class="column side"></div>
@@ -222,11 +231,12 @@ p {margin: 4px;}
     </div>
     <div class="box">
         <div class="imgBx">
-            <img src="imgs/04.jpg">
+            <img src="/Volumes/Server/hoikahei/照片/zxbxjx 712.jpeg">
         </div>
         <div class="content">
-            <h3></h3>
-            <p></p>
+           <center> <h3>干物妹！小埋</h3></center>
+            <p>《我家有個魚乾妹》（日語：干物妹!うまるちゃん）是日本漫畫家三角頭創作的日本漫畫作品，於《週刊YOUNG JUMP》2013年15號開始連載。單行本全12卷。本作的故事背景設定在東京都八王子市[註 1]，講述的是一位在外面是嫻熟高貴、但回到家後立即變成宅在家中喜歡ACG的乾物女小埋，與照顧她生活的哥哥以及好友們之間發生的喜劇故事。2017年10月8日起在AT-X、東京都會電視台、日本BS放送等電視台放送第2期。</p><br>
+            <center><a href="https://www.bilibili.com/bangumi/play/ss6446?spm_id_from=333.337.0.0">直達連結</a></center>
         </div>
     </div>
   </div>
@@ -261,10 +271,11 @@ p {margin: 4px;}
 </div>
 <div id = "gotop"><img src="https://zxbxjx.github.io/zxbxjx/照片/scroll.png" alt="gotop"></div>
 <div class="footer">
-  <p>
-    以上圖片禁止轉發、下載 | 人形出處：https://www.jsdelivr.com/
-  </p>
-  <p><spen data-v-77fdfb6e="">ZXBXJX</spen> Copyright © 2022 - <spen id="currentYear"></spen> ZXBXJX. All Rights Reserved.|</center></div>
+    <p>
+      以上圖片禁止轉發、下載 | 人形出處:https://www.jsdelivr.com/ | 鼠标圖:https://blog-static.cnblogs.com/
+    </p>
+    <a href="https://zxbxjx.github.io/zxbxjx/聲明/index.html">使用聲明</a>
+    <p><spen data-v-77fdfb6e="">ZXBXJX</spen> Copyright © 2022 - <spen id="currentYear"></spen> ZXBXJX. All Rights Reserved.|</center></div>
 </div>
 <script src="index.js"></script>
 <script src="q.js"></script>
@@ -292,6 +303,12 @@ p {margin: 4px;}
   <script>
     const currentYearEl = document.getElementById('currentYear')
     currentYearEl.innerText = new Date().getFullYear()
+</script>
+<script>
+    window.addEventListener("scroll",()=>{
+        let header=document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY>0);
+    })
 </script>
 </body>
 </html>
