@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>追番列表 -- ZXBXJX</title>
-    <script type="text/javascript">
-        if (navigator.userAgent.match(/Android|iPhone|iPad/i)) {
-            window.location = '404.html';
-        }
-    </script>
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -118,5 +113,11 @@
             <a href="https://zxbxjx.github.io/zxbxjx/聲明/index.html">使用聲明</a>
             <p><spen data-v-77fdfb6e="">ZXBXJX</spen> Copyright © 2022 - <spen id="currentYear"></spen> ZXBXJX. All Rights Reserved.|</center></div>
       </div>
+      <script>
+        window.addEventListener("scroll",()=>{
+            let header=document.querySelector("header");
+            header.classList.toggle("sticky",window.scrollY>0);
+        })
+    </script>
 </body>
 </html>
